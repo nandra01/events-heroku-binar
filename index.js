@@ -21,5 +21,5 @@ app.get('/event', tokenMiddleware.verifyToken, eventController.get)
 
 
 app.listen(process.env.PORT || 3003, () => {
-  console.log(`server is running on port ${PORT}`);
+  console.log(`server is running on port ${process.env.PORT}`);
 })
