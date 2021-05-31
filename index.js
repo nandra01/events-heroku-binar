@@ -20,7 +20,6 @@ app.post('/event', tokenMiddleware.verifyToken, eventController.create)
 app.get('/event', tokenMiddleware.verifyToken, eventController.get)
 
 
-const PORT = 3003
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3003, () => {
   console.log(`server is running on port ${PORT}`);
 })
